@@ -1,0 +1,50 @@
+.container {
+  width: 300px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  padding-left: 50px;
+}
+
+.formiku{
+  display:flex;
+ flex-direction: column;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.contactlist {
+  list-style: none;
+  padding: 0;
+}
+
+.contactitem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.deletebutton {
+  background-color: lightgray;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.deletebutton:hover {
+  background-color: darkgray;
+}
