@@ -30,6 +30,6 @@ export const deleteContact = createAsyncThunk("contacts/deleteContact", async(co
   }catch (error) {
     return thunkAPI.rejectWithValue(error.message);
   }
-})
+});
 
 // ccc
