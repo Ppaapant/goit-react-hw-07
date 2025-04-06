@@ -1,12 +1,13 @@
 import { useDispatch, useSelector } from "react-redux";
 import { deleteContact } from "../redux/contactsOps";
+
 import Contact from "./Contact";
 
 import { selectFilteredContacts, selectLoading, selectError } from "../redux/contactsSlice";
 
 const ContactList = () => {
   const dispatch = useDispatch();
-
+  const filteredContacts = useSelector(selectFilteredContacts);
  
   const contacts = useSelector(selectFilteredContacts);
   const loading = useSelector(selectLoading);
@@ -15,6 +16,10 @@ const ContactList = () => {
   const handleDelete = (id) => {
     dispatch(deleteContact(id));  
   };
+  
+  if (filteredContacts.length === 0) {
+    return <p>Контактів не знайдено</p>;
+  }
 
   return (
     <div>
